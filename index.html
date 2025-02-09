@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple webpage displaying a valentine's day card">
+        <meta name="keywords" contents="HTML, CSS, JavaScript, Web Development, Love">
+        <meta name="author" content="Jacob Stone">
+        <link rel="stylesheet" href="styles.css">
+        <title>Card</title>
+    </head>
+    <body>
+        <main>
+            <div class="content-container"><!-- This will hold the card and the buttons -->
+                <div class="card-container"> <!-- The card lives here! -->
+                    <svg width="375" height="250" viewbox="0 0 375 250">
+                        <rect x="0" y="20" width="375" height="250" fill="white" stroke="black" stroke-width="1"></rect>
+                    </svg>                    
+                </div>
+                <div class="button-group"> <!-- Buttons live here: Button activates the card, Reset resets everything-->
+                    <button type="button">Button</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
