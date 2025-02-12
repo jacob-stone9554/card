@@ -19,12 +19,14 @@ main {
 
 .content-container {
     border: 1px solid black;
-    height: 35%;
-    width: 35%;;
+    height: 65%;
+    width: 800px;
 }
 
 .card-container {
-    height: 75%;
+    height: 600px;
+    width: 800px;
+    background-color: aqua;
     border: 1px solid green;
     display: flex;
     flex-direction: column;
