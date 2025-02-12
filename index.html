@@ -13,20 +13,23 @@
         <main>
             <div class="content-container"><!-- This will hold the card and the buttons -->
                 <div class="card-container"> <!-- The card lives here! -->
-                    <svg width="800" height="600" style="background: grey" viewbox="0 0 800 800">
+                    <svg width="800" height="600" style="background: black" viewbox="0 0 800 800">
                         <!-- inside of envelope, keep it black? -->
-                        <rect x="100" y="300" height="400" width="600" height="400" fill="lightgray"/>
+                        <rect x="100" y="300" height="400" width="600" height="400" fill="grey"/>
 
                         <!-- These polygons build the visual outside of the envelope -->                        
 
-                        <rect x="150" y="300" width="500" height="700" fill="green"/> 
+                        <polygon points="100,300 400,500 700,300" style="fill: white" stroke="lightgray"/>  
+                        
+                        <rect x="150" y="300" width="500" height="600" style="fill: white; opacity: 0"/> 
 
                         <polygon points="100,300 400,500 100,700" style="fill: white" stroke="lightgray"/>
                         <polygon points="100,700 400,500 700,700" style="fill: white" stroke="lightgray" />
                         <polygon points="700,700, 400,500 700,300" style="fill: white" stroke="lightgray"/>
-                        <polygon points="100,300 400,500 700,300" style="fill: white" stroke="lightgray"/>  
-
+                        
                         <path
+                        id="heart"
+
                         d="M0 200 v-200 h200 
                         a100,100 90 0,1 0,200
                         a100,100 90 0,1 -200,0
@@ -40,7 +43,7 @@
                         <!-- This is the actual letter -->
                         
                         <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
-                        <rect x="100" y="700" height="100" width="600" fill="grey"/>
+                        <rect x="100" y="700" height="100" width="600" fill="black"/>
                     </svg>                    
                 </div>
                 <div class="button-group"> <!-- Buttons live here: Button activates the card, Reset resets everything-->
