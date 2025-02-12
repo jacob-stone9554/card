@@ -13,20 +13,47 @@
         <main>
             <div class="content-container"><!-- This will hold the card and the buttons -->
                 <div class="card-container"> <!-- The card lives here! -->
-                    <svg width="800" height="600" style="background: grey">
-                        <rect x="100" y="100" height="400" width="600" height="400">wodrd</rect> 
+                    <svg width="800" height="600" style="background: grey" viewbox="0 0 800 800">
+                        <!-- inside of envelope, keep it black? -->
+                        <rect x="100" y="300" height="400" width="600" height="400" fill="lightgray"/>
 
-                        <polygon points="100,100 400,300 100,500" style="fill: white" stroke="lightgray"/>
-                        <polygon points="100,500 400,300 700,500" style="fill: white" stroke="lightgray" />
-                        <polygon points="700,500, 400,300 700,100" style="fill: white" stroke="lightgray"/>
-                        <polygon points="100,100 400,300 700,100" style="fill: white" stroke="lightgray"/>
-                    </svg>
+                        <!-- These polygons build the visual outside of the envelope -->                        
+
+                        <rect x="150" y="300" width="500" height="700" fill="green"/> 
+
+                        <polygon points="100,300 400,500 100,700" style="fill: white" stroke="lightgray"/>
+                        <polygon points="100,700 400,500 700,700" style="fill: white" stroke="lightgray" />
+                        <polygon points="700,700, 400,500 700,300" style="fill: white" stroke="lightgray"/>
+                        <polygon points="100,300 400,500 700,300" style="fill: white" stroke="lightgray"/>  
+
+                        <path
+                        d="M0 200 v-200 h200 
+                        a100,100 90 0,1 0,200
+                        a100,100 90 0,1 -200,0
+                        z" 
+                        
+                        fill="red"
+                        stroke="black"
+                        transform="rotate(225 310, 190) scale(0.25)"
+                        />
+
+                        <!-- This is the actual letter -->
+                        
+                        <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
+                        <rect x="100" y="700" height="100" width="600" fill="grey"/>
+                    </svg>                    
                 </div>
                 <div class="button-group"> <!-- Buttons live here: Button activates the card, Reset resets everything-->
-                    <button type="button">Button</button>
-                    <button type="reset">Reset</button>
+                    <button id="clickMe" type="button">Click Me!</button>
+                    <button id="reset" type="reset">Reset</button>
                 </div>
             </div>
         </main>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/TextPlugin.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
