@@ -29,13 +29,18 @@
                             <tspan x="225" dy="00">Hi Livi!</tspan>
                             <tspan x="229" dy="30">Will you be my Valentine?</tspan>
                         </text>
-                        
+                         
                         <image href="images/stupid-rose-in-mouth-emoji.jpg" 
                         x="275" y="500" width="250" height="250"/>                    
                         
-                        <rect x="200" y="765" width="40" height="40" fill="white" stroke="black"/>
-                        <text id="yes" x="245" y="800" height="40" width="40" font-family="Caveat" font-size="40" fill="black">Yes</text>
-
+                        <rect id="yes" x="210" y="790" width="40" height="40" fill="white" stroke="black"/>
+                        <text x="255" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black">Yes</text>
+                        <line x1="210" y1="790" x2="250" y2="830" stroke="black" stroke-width="2" opacity="0"/>
+                        <line x1="250" y1="790" x2="210" y2="830" stroke="black" stroke-width="2" opacity="0"/>
+                        
+                        <rect id="no-1" x="455" y="790" width="40" height="40" fill="white" stroke="black"/>
+                        <text x="500" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black">No</text>
+                        
                         <polygon points="100,300 400,500 100,700" style="fill: white" stroke="lightgray"/>
                         <polygon points="100,700 400,500 700,700" style="fill: white" stroke="lightgray" />
                         <polygon points="700,700, 400,500 700,300" style="fill: white" stroke="lightgray"/>
@@ -55,11 +60,12 @@
                         transform="rotate(225 310, 190) scale(0.25)"
                         />
                         
+
                         <!-- This is the actual letter -->
                         
                         <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
-                        <rect x="100" y="700" height="100" width="600" fill="black"/>
-
+                        <rect x="100" y="700" height="100" width="600" fill="green"/>
+                        
                     </svg>                    
                 </div>
                 <div class="button-group"> <!-- Buttons live here: Button activates the card, Reset resets everything-->
