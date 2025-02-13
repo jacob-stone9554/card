@@ -1,4 +1,6 @@
 //initial start click
+let count = 0;
+
 document.getElementById("clickMe").addEventListener("click", function () {
   //gsap code will go here :)
 
@@ -25,6 +27,12 @@ document.getElementById("clickMe").addEventListener("click", function () {
     duration: 1,
     opacity: 1,
     delay: 1,
+  });
+
+  gsap.to("rect:nth-of-type(5)", {
+    y: -300,
+    duration: 1,
+    delay: 1
   });
 
   gsap.to("text", {
@@ -72,7 +80,7 @@ document.getElementById("clickMe").addEventListener("click", function () {
 
   // MOVE LETTER DOWN
 
-  gsap.to("rect:nth-of-type(2), rect:nth-of-type(3), rect:nth-of-type(4)", {
+  gsap.to("rect:nth-of-type(2), rect:nth-of-type(3), rect:nth-of-type(4), rect:nth-of-type(5)", {
     y: -175,
     duration: 1,
     delay: 4,
@@ -100,6 +108,8 @@ document.getElementById("clickMe").addEventListener("click", function () {
 
 //reset click
 document.getElementById("reset").addEventListener("click", function () {
+  count = 0;
+
   gsap.to("polygon:nth-of-type(1)", {
     scaleY: 1,
     y: 0,
@@ -319,12 +329,21 @@ document.getElementById("no-1").addEventListener("click", () => {
   });
 
   gsap.to("rect:nth-of-type(4)", {
-    opacity: 0,
+    display: "none",
     duration: 0
   });
 
   gsap.to("rect:nth-of-type(5)", {
-    opacity: 1,
+    display: "inline",
     duration: 0
   });
+});
+
+
+document.getElementById("no-2").addEventListener("click", () => {
+  count++;
+
+  if(count == 3) {
+    alert(count);
+  }
 });
