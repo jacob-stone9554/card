@@ -16,7 +16,7 @@
         <main>
             <div class="content-container"><!-- This will hold the card and the buttons -->
                 <div class="card-container"> <!-- The card lives here! -->
-                    <svg width="800" height="600" style="background: green" viewbox="0 0 800 800">
+                    <svg width="800" height="600" style="background: burlywood" viewbox="0 0 800 800">
                         <!-- inside of envelope, keep it black? -->
                         <rect x="100" y="300" height="400" width="600" height="400" fill="grey"/>
 
@@ -29,9 +29,20 @@
                             <tspan x="225" dy="00">Hi Livi!</tspan>
                             <tspan x="229" dy="30">Will you be my Valentine?</tspan>
                         </text>
+
+                        <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
+                            <tspan x="229" dy="00">YIPPIE YIPPIE YIPPIE!</tspan>
+                            <tspan x="325" dy="30">I love you &lt;3</tspan>
+                        </text>
                          
                         <image href="images/stupid-rose-in-mouth-emoji.jpg" 
-                        x="275" y="500" width="250" height="250"/>                    
+                        x="275" y="500" width="250" height="250"/>
+
+                        <image href="images/stupid-looking-emoji.jpg" 
+                        x="275" y="500" width="250" height="250" display="none"/>
+                        
+                        <image href="images/esnupi1.gif" 
+                        x="275" y="500" width="250" height="250" display="none"/>
                         
                         <rect id="yes" x="210" y="790" width="40" height="40" fill="white" stroke="black"/>
                         <text x="255" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black">Yes</text>
@@ -64,7 +75,7 @@
                         <!-- This is the actual letter -->
                         
                         <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
-                        <rect x="100" y="700" height="100" width="600" fill="green"/>
+                        <rect x="100" y="700" height="100" width="600" fill="burlywood"/>
                         
                     </svg>                    
                 </div>

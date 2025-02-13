@@ -28,11 +28,16 @@ document.getElementById("clickMe").addEventListener("click", function () {
   });
 
   gsap.to("text", {
-    y: -300,
-    opacity: 1,
-    duration: 1,
-    delay: 1,
-  });
+   y: -300,
+   duration: 1,
+   delay: 1,
+ });
+
+ gsap.to("text:nth-of-type(1)", {
+   opacity: 1,
+   duration: 1,
+   delay: 1,
+ });
 
   gsap.to("image", {
     y: -300,
@@ -134,6 +139,16 @@ document.getElementById("reset").addEventListener("click", function () {
    opacity: 0,
    duration: 0.5,
  });
+
+ gsap.to("image:nth-of-type(1)", {
+   opacity: 1,
+   duration: 0
+})
+
+gsap.to("image:nth-of-type(3)", {
+   display: "none",
+   duration: 0
+});
 });
 
 //yes hover
@@ -160,6 +175,21 @@ document.getElementById("yes").addEventListener("click", () => {
       opacity: 0,
       duration: 0
    })
+
+   gsap.to("image:nth-of-type(3)", {
+      display: "block",
+      duration: 0
+   });
+
+   gsap.to("text:nth-of-type(1)", {
+      opacity: 0,
+      duration: 0
+   });
+
+   gsap.to("text:nth-of-type(2)", {
+      opacity: 1,
+      duration: 0
+   });
 });
 
 //no-1 hover
