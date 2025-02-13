@@ -41,7 +41,7 @@ document.getElementById("clickMe").addEventListener("click", function () {
    delay: 1,
  });
 
- gsap.to("text:nth-of-type(1), text:nth-of-type(5), text:nth-of-type(6)", {
+ gsap.to("text:nth-of-type(1), text:nth-of-type(6), text:nth-of-type(7)", {
    opacity: 1,
    duration: 1,
    delay: 1,
@@ -163,7 +163,7 @@ document.getElementById("reset").addEventListener("click", function () {
    duration: 0
 })
 
-gsap.to("image:nth-of-type(3), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6)", {
+gsap.to("image:nth-of-type(3), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6), image:nth-of-type(7)", {
    display: "none",
    duration: 0
 });
@@ -240,7 +240,7 @@ document.getElementById("yes").addEventListener("click", () => {
     duration: 0
    })
 
-   gsap.to("image:nth-of-type(1), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6)", {
+   gsap.to("image:nth-of-type(1), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6), image:nth-of-type(7)", {
       opacity: 0,
       duration: 0
    })
@@ -255,7 +255,7 @@ document.getElementById("yes").addEventListener("click", () => {
       duration: 0
    });
 
-   gsap.to("text:nth-of-type(5)", {
+   gsap.to("text:nth-of-type(6)", {
     opacity: 1,
     duration: 0
    });
@@ -293,7 +293,8 @@ document.getElementById("no-1").addEventListener("click", () => {
 
    gsap.to("image:nth-of-type(1)", {
       opacity: 0,
-      duration: 0
+      duration: 0,
+      delay: 0
    })
 
    gsap.to("image:nth-of-type(4)", {
@@ -303,14 +304,14 @@ document.getElementById("no-1").addEventListener("click", () => {
 
    gsap.to("image:nth-of-type(4)", {
       display: "none",
-      duration: 2,
-      delay: 2
+      duration: 0,
+      delay: 1
    });
 
    gsap.to("image:nth-of-type(5)", {
       display: "block",
       duration: 2,
-      delay: 2
+      delay: 1
    });
 
    gsap.to("text:nth-of-type(1)", {
@@ -333,12 +334,12 @@ document.getElementById("no-1").addEventListener("click", () => {
     duration: 0
    });
 
-   gsap.to("text:nth-of-type(6)", {
+   gsap.to("text:nth-of-type(7)", {
     opacity: 0,
     duration: 0
   });
 
-  gsap.to("text:nth-of-type(7)", {
+  gsap.to("text:nth-of-type(8)", {
     opacity: 1,
     duration: 0
   });
@@ -357,25 +358,6 @@ document.getElementById("no-1").addEventListener("click", () => {
 
 document.getElementById("no-2").addEventListener("click", () => {
   count++;
-
-  if(count < 8) {
-    const xBound = 250;
-    const yBound = 65;
-
-    let randX = Math.random() * (xBound - 50);
-    let randY = Math.random() * (yBound - 50);
-
-    gsap.to("rect:nth-of-type(5)", {
-      x: randX,
-      y: -randY
-    });
-
-    console.log(`${randX}, ${randY}`)
-  }
-
-  if(count == 8) { //disable at this point lol
-    alert(count);
-  }
 
   gsap.to("image:nth-of-type(5), image:nth-of-type(4)", {
     display: "none",
@@ -398,4 +380,55 @@ document.getElementById("no-2").addEventListener("click", () => {
     opacity: 1,
     duration: 0
   });
+
+  if(count < 5) {
+    const xBound = 250;
+    const yBound = 65;
+
+    let randX = Math.random() * (xBound - 15);
+    let randY = Math.random() * (yBound - 5);
+
+    gsap.to("rect:nth-of-type(5)", {
+      x: -randX,
+      y: -randY
+    });
+
+    console.log(`${randX}, ${randY}`)
+  }
+
+  if(count == 5) { //disable at this point lol
+    gsap.to("rect:nth-of-type(5)", {
+      opacity: 0,
+      duration: 1
+    });
+
+    gsap.to("text:nth-of-type(8)", {
+      opacity:0,
+      duration: 1
+    });
+
+    gsap.to("image:nth-of-type(7)", {
+      display: "block",
+      duration: 0,
+      delay: 0
+    });
+
+    gsap.to("image:nth-of-type(6)", {
+      display: "none",
+      duration: 0,
+      delay: 0
+    });
+
+    gsap.to("text:nth-of-type(4)", {
+      opacity:0,
+      duration: 0,
+      delay: 0
+    });
+
+    gsap.to("text:nth-of-type(5)", {
+      opacity:1,
+      duration: 0,
+      delay: 0
+    });
+  }
 });
