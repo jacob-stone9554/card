@@ -193,3 +193,55 @@ document.getElementById("yes").addEventListener("click", () => {
 });
 
 //no-1 hover
+document.getElementById("no-1").addEventListener("mouseenter", () => {
+   gsap.to("#no-1", { scale: 1.1, duration: 0.2 });
+ 
+   gsap.to("line:nth-of-type(3), line:nth-of-type(4)", { scale: 1.1, duration: 0.2 });
+ });
+
+//no-1 hover
+document.getElementById("no-1").addEventListener("mouseleave", () => {
+   gsap.to("#no-1", { scale: 1, duration: 0.2 });
+   gsap.to("line:nth-of-type(3), line:nth-of-type(4)", { scale: 1, duration: 0.2 });
+ });
+
+//no-1 click
+//yes click
+document.getElementById("no-1").addEventListener("click", () => {
+   gsap.to("line:nth-of-type(3), line:nth-of-type(4)", {
+      opacity: 1,
+      duration: 1
+   });
+
+   gsap.to("image:nth-of-type(1)", {
+      opacity: 0,
+      duration: 0
+   })
+
+   gsap.to("image:nth-of-type(4)", {
+      display: "block",
+      duration: 0
+   });
+
+   gsap.to("image:nth-of-type(4)", {
+      display: "none",
+      duration: 2,
+      delay: 2
+   });
+
+   gsap.to("image:nth-of-type(5)", {
+      display: "block",
+      duration: 2,
+      delay: 2
+   });
+
+   gsap.to("text:nth-of-type(1)", {
+      opacity: 0,
+      duration: 0
+   });
+
+   gsap.to("text:nth-of-type(3)", {
+      opacity: 1,
+      duration: 0
+   });
+});
