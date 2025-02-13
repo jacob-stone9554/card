@@ -41,7 +41,7 @@ document.getElementById("clickMe").addEventListener("click", function () {
    delay: 1,
  });
 
- gsap.to("text:nth-of-type(1), text:nth-of-type(4), text:nth-of-type(5)", {
+ gsap.to("text:nth-of-type(1), text:nth-of-type(5), text:nth-of-type(6)", {
    opacity: 1,
    duration: 1,
    delay: 1,
@@ -315,10 +315,8 @@ document.getElementById("no-1").addEventListener("click", () => {
     opacity: 1,
     duration: 0
    });
-});
 
-document.getElementById("no-1").addEventListener("click", () => {
-  gsap.to("text:nth-of-type(6)", {
+   gsap.to("text:nth-of-type(6)", {
     opacity: 0,
     duration: 0
   });
@@ -346,4 +344,26 @@ document.getElementById("no-2").addEventListener("click", () => {
   if(count == 3) {
     alert(count);
   }
+
+  gsap.to("image:nth-of-type(5), image:nth-of-type(4)", {
+    display: "none",
+    duration: 0,
+    delay: 0
+  });
+
+  gsap.to("image:nth-of-type(6)", {
+    display: "block",
+    duration: 0,
+    delay: 0
+  });
+
+  gsap.to("text:nth-of-type(3)", {
+    opacity: 0,
+    duration: 0
+  });
+
+  gsap.to("text:nth-of-type(4)", {
+    opacity: 1,
+    duration: 0
+  });
 });
