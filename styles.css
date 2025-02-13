@@ -61,3 +61,18 @@ main {
 .button-group button:active {
     background-color: #87ADDE;
 }
+
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        width: 95%;
+    }
+
+    .card-container {
+        width: 100%;
+    }
+
+    .button-group button {
+        width: 50%; /* Make buttons more accessible on mobile */
+    }
+}
