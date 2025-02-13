@@ -33,7 +33,7 @@ document.getElementById("clickMe").addEventListener("click", function () {
    delay: 1,
  });
 
- gsap.to("text:nth-of-type(1)", {
+ gsap.to("text:nth-of-type(1), text:nth-of-type(4), text:nth-of-type(5)", {
    opacity: 1,
    duration: 1,
    delay: 1,
@@ -46,6 +46,14 @@ document.getElementById("clickMe").addEventListener("click", function () {
     delay: 1,
   });
 
+  gsap.to("image:nth-of-type(4), image:nth-of-type(5)", {
+    y: -300,
+    display: "none",
+    duration: 1,
+    delay: 0,
+  });
+
+
   gsap.to("line", {
     y: -300,
     duration: 1,
@@ -54,7 +62,7 @@ document.getElementById("clickMe").addEventListener("click", function () {
 
   // MOVE ENVELOPE DOWN
   gsap.to(
-    "polygon:nth-of-type(1), polygon:nth-of-type(2), polygon:nth-of-type(3), polygon:nth-of-type(4), rect:nth-of-type(1), rect:nth-of-type(5)",
+    "polygon:nth-of-type(1), polygon:nth-of-type(2), polygon:nth-of-type(3), polygon:nth-of-type(4), rect:nth-of-type(1), rect:nth-of-type(6)",
     {
       y: 1200,
       duration: 1,
@@ -106,7 +114,7 @@ document.getElementById("reset").addEventListener("click", function () {
   });
 
   gsap.to(
-    "polygon:nth-of-type(1), polygon:nth-of-type(2), polygon:nth-of-type(3), polygon:nth-of-type(4), rect:nth-of-type(1), rect:nth-of-type(3), rect:nth-of-type(5)",
+    "polygon:nth-of-type(1), polygon:nth-of-type(2), polygon:nth-of-type(3), polygon:nth-of-type(4), rect:nth-of-type(1), rect:nth-of-type(3), rect:nth-of-type(6)",
     {
       y: 0,
       duration: 0.5,
@@ -145,7 +153,7 @@ document.getElementById("reset").addEventListener("click", function () {
    duration: 0
 })
 
-gsap.to("image:nth-of-type(3)", {
+gsap.to("image:nth-of-type(3), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6)", {
    display: "none",
    duration: 0
 });
@@ -194,13 +202,18 @@ document.getElementById("yes").addEventListener("click", () => {
     particleCount: 10,
     scalar: 4,
   });
-  
+
    gsap.to("line:nth-of-type(1), line:nth-of-type(2)", {
       opacity: 1,
       duration: 1
    });
 
-   gsap.to("image:nth-of-type(1)", {
+   gsap.to("line:nth-of-type(3), line:nth-of-type(4)", {
+    opacity: 0,
+    duration: 0
+   })
+
+   gsap.to("image:nth-of-type(1), image:nth-of-type(4), image:nth-of-type(5)", {
       opacity: 0,
       duration: 0
    })
@@ -210,15 +223,25 @@ document.getElementById("yes").addEventListener("click", () => {
       duration: 0
    });
 
-   gsap.to("text:nth-of-type(1)", {
+   gsap.to("text", {
       opacity: 0,
       duration: 0
+   });
+
+   gsap.to("text:nth-of-type(4)", {
+    opacity: 1,
+    duration: 0
    });
 
    gsap.to("text:nth-of-type(2)", {
       opacity: 1,
       duration: 0
    });
+
+   gsap.to("rect:nth-of-type(4)", {
+    opacity: 0,
+    duration: 0
+   })
 });
 
 //no-1 hover
@@ -235,12 +258,11 @@ document.getElementById("no-1").addEventListener("mouseleave", () => {
  });
 
 //no-1 click
-//yes click
 document.getElementById("no-1").addEventListener("click", () => {
-   gsap.to("line:nth-of-type(3), line:nth-of-type(4)", {
-      opacity: 1,
-      duration: 1
-   });
+  //  gsap.to("line:nth-of-type(3), line:nth-of-type(4)", {
+  //     opacity: 1,
+  //     duration: 1
+  //  });
 
    gsap.to("image:nth-of-type(1)", {
       opacity: 0,
@@ -273,4 +295,36 @@ document.getElementById("no-1").addEventListener("click", () => {
       opacity: 1,
       duration: 0
    });
+
+   gsap.to("rect:nth-of-type(4)", {
+    opacity: 0,
+    duration: 0
+   });
+
+   gsap.to("rect:nth-of-type(5)", {
+    opacity: 1,
+    duration: 0
+   });
+});
+
+document.getElementById("no-1").addEventListener("click", () => {
+  gsap.to("text:nth-of-type(6)", {
+    opacity: 0,
+    duration: 0
+  });
+
+  gsap.to("text:nth-of-type(7)", {
+    opacity: 1,
+    duration: 0
+  });
+
+  gsap.to("rect:nth-of-type(4)", {
+    opacity: 0,
+    duration: 0
+  });
+
+  gsap.to("rect:nth-of-type(5)", {
+    opacity: 1,
+    duration: 0
+  });
 });

@@ -18,26 +18,38 @@
                 <div class="card-container"> <!-- The card lives here! -->
                     <svg width="800" height="600" style="background: burlywood" viewbox="0 0 800 800">
                         <!-- inside of envelope, keep it black? -->
+                         <!-- RECT 1 -->
                         <rect x="100" y="300" height="400" width="600" height="400" fill="grey"/>
 
                         <!-- These polygons build the visual outside of the envelope -->                        
 
                         <polygon points="100,300 400,500 700,300" style="fill: white" stroke="lightgray"/>  
                         
+                        <!-- RECT 2 -->
                         <rect x="150" y="300" width="500" height="600" style="fill: white; opacity: 0"/> 
+
+                        <!--TEXT 1 -->
                         <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
                             <tspan x="225" dy="00">Hi Livi!</tspan>
                             <tspan x="229" dy="30">Will you be my Valentine?</tspan>
                         </text>
 
+                        <!-- TEXT 2-->
                         <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
                             <tspan x="229" dy="00">YIPPIE YIPPIE YIPPIE!</tspan>
                             <tspan x="325" dy="30">I love you &lt;3</tspan>
                         </text>
 
+                        <!--TEXT 3-->
                         <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
                             <tspan x="229" dy="00">Wait really? You said no?</tspan>
                             <tspan x="300" dy="30">You meant 'Yes', right?</tspan>
+                        </text>
+
+                        <!-- TEXT 4-->
+                        <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
+                            <tspan x="229" dy="00" opacity="0">That can't be right, it must be a mistake.</tspan>
+                            <tspan x="300" dy="30" opacity="0">Go ahead and try again</tspan>
                         </text>
                          
                         <image href="images/stupid-rose-in-mouth-emoji.jpg" 
@@ -50,18 +62,32 @@
                         x="275" y="500" width="250" height="250" display="none"/>
                         
                         <image href="images/stupid-looking-emoji.jpg" 
-                        x="275" y="500" width="250" height="250" display="none"/>
+                        x="275" y="500" width="250" height="250"  display="none"/>
 
                         <image href="images/shocked.jpg" 
                         x="275" y="500" width="250" height="250" display="none"/>
                         
+                        <!--RECT 3-->
                         <rect id="yes" x="210" y="790" width="40" height="40" fill="white" stroke="black"/>
+
+                        <!--TEXT 5-->
                         <text x="255" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black">Yes</text>
                         <line x1="210" y1="790" x2="250" y2="830" stroke="black" stroke-width="2" opacity="0"/>
                         <line x1="250" y1="790" x2="210" y2="830" stroke="black" stroke-width="2" opacity="0"/>
                         
+                        <!--RECT 4-->
                         <rect id="no-1" x="455" y="790" width="40" height="40" fill="white" stroke="black"/>
+
+                        <!--TEXT 6-->
                         <text x="500" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black">No</text>
+                        <line x1="455" y1="790" x2="495" y2="830" stroke="black" opacity="0"/>
+                        <line x1="495" y1="790" x2="455" y2="830" stroke="black" opacity="0"/>
+
+                        <!--RECT 5 -->
+                        <rect id="no-2" x="455" y="790" width="40" height="40" fill="green" stroke="black" opacity="0"/>
+
+                        <!--TEXT 7-->
+                        <text x="500" y="825" height="40" width="40" font-family="Caveat" font-size="40" fill="black" opacity="0">No</text>
                         <line x1="455" y1="790" x2="495" y2="830" stroke="black" opacity="0"/>
                         <line x1="495" y1="790" x2="455" y2="830" stroke="black" opacity="0"/>
                         
@@ -88,6 +114,7 @@
                         <!-- This is the actual letter -->
                         
                         <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
+                         <!--RECT 6-->
                         <rect x="100" y="700" height="100" width="600" fill="burlywood"/>
                         
                     </svg>                    
