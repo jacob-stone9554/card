@@ -167,6 +167,23 @@ gsap.to("image:nth-of-type(3), image:nth-of-type(4), image:nth-of-type(5), image
    display: "none",
    duration: 0
 });
+
+  //rect:nth-of-type4 -> display: inline; nth-of-type5 display: none
+  gsap.to("rect:nth-of-type(4)", {
+    display: "inline",
+    duration: 0
+  });
+
+  gsap.to("rect:nth-of-type(5)", {
+    display: "none",
+    duration: 0
+  });
+
+  gsap.set("rect:nth-of-type(5)", {
+    x: 0,
+    y: 0
+  });
+
 });
 
 //yes hover
@@ -223,7 +240,7 @@ document.getElementById("yes").addEventListener("click", () => {
     duration: 0
    })
 
-   gsap.to("image:nth-of-type(1), image:nth-of-type(4), image:nth-of-type(5)", {
+   gsap.to("image:nth-of-type(1), image:nth-of-type(4), image:nth-of-type(5), image:nth-of-type(6)", {
       opacity: 0,
       duration: 0
    })
@@ -238,7 +255,7 @@ document.getElementById("yes").addEventListener("click", () => {
       duration: 0
    });
 
-   gsap.to("text:nth-of-type(4)", {
+   gsap.to("text:nth-of-type(5)", {
     opacity: 1,
     duration: 0
    });
@@ -341,7 +358,22 @@ document.getElementById("no-1").addEventListener("click", () => {
 document.getElementById("no-2").addEventListener("click", () => {
   count++;
 
-  if(count == 3) {
+  if(count < 8) {
+    const xBound = 250;
+    const yBound = 65;
+
+    let randX = Math.random() * (xBound - 50);
+    let randY = Math.random() * (yBound - 50);
+
+    gsap.to("rect:nth-of-type(5)", {
+      x: randX,
+      y: -randY
+    });
+
+    console.log(`${randX}, ${randY}`)
+  }
+
+  if(count == 8) { //disable at this point lol
     alert(count);
   }
 
