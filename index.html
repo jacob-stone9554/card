@@ -7,13 +7,16 @@
         <meta name="keywords" contents="HTML, CSS, JavaScript, Web Development, Love">
         <meta name="author" content="Jacob Stone">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
         <title>Card</title>
     </head>
     <body>
         <main>
             <div class="content-container"><!-- This will hold the card and the buttons -->
                 <div class="card-container"> <!-- The card lives here! -->
-                    <svg width="800" height="600" style="background: black" viewbox="0 0 800 800">
+                    <svg width="800" height="600" style="background: green" viewbox="0 0 800 800">
                         <!-- inside of envelope, keep it black? -->
                         <rect x="100" y="300" height="400" width="600" height="400" fill="grey"/>
 
@@ -22,14 +25,26 @@
                         <polygon points="100,300 400,500 700,300" style="fill: white" stroke="lightgray"/>  
                         
                         <rect x="150" y="300" width="500" height="600" style="fill: white; opacity: 0"/> 
+                        <text id="hello" x="400" y="400" font-family="Caveat" font-size="32" fill="black" opacity="0">
+                            <tspan x="225" dy="00">Hi Livi!</tspan>
+                            <tspan x="229" dy="30">Will you be my Valentine?</tspan>
+                        </text>
+                        
+                        <image href="images/stupid-rose-in-mouth-emoji.jpg" 
+                        x="275" y="500" width="250" height="250"/>                    
+                        
+                        <rect x="200" y="765" width="40" height="40" fill="white" stroke="black"/>
+                        <text id="yes" x="245" y="800" height="40" width="40" font-family="Caveat" font-size="40" fill="black">Yes</text>
 
                         <polygon points="100,300 400,500 100,700" style="fill: white" stroke="lightgray"/>
                         <polygon points="100,700 400,500 700,700" style="fill: white" stroke="lightgray" />
                         <polygon points="700,700, 400,500 700,300" style="fill: white" stroke="lightgray"/>
                         
+                        
+                        
                         <path
                         id="heart"
-
+                        
                         d="M0 200 v-200 h200 
                         a100,100 90 0,1 0,200
                         a100,100 90 0,1 -200,0
@@ -39,11 +54,12 @@
                         stroke="black"
                         transform="rotate(225 310, 190) scale(0.25)"
                         />
-
+                        
                         <!-- This is the actual letter -->
                         
                         <!-- Since the letter is longer than the envelope, use this to hide the bottom of it -->
                         <rect x="100" y="700" height="100" width="600" fill="black"/>
+
                     </svg>                    
                 </div>
                 <div class="button-group"> <!-- Buttons live here: Button activates the card, Reset resets everything-->
